@@ -4,7 +4,7 @@ public class Mario extends Actor
     int speed;
     String Marioimage = "mariopixelCopy.png";
     long lastTime;
-    int Lives = 30;
+    int Lives = 3;
     public void act() 
     {
         speed = speed + 1;
