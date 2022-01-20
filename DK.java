@@ -2,7 +2,6 @@ import greenfoot.*;
 public class DK extends Actor
 {
     long lastTime;
-    long AnimationSwitch; 
     public void act() 
     {
         if(isTouching(Mario.class))
@@ -20,5 +19,6 @@ public class DK extends Actor
                  if (System.currentTimeMillis() - lastTime > 300) {
            setImage("donkey-kong_standing.png");
         }
+
     } 
 }
