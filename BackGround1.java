@@ -8,33 +8,41 @@ import greenfoot.*;
  */
 public class BackGround1 extends World
 {
-
+    //Dimensions of the screen.
+    public static int screenX = 1100;
+    public static int screenY = 780;
+    
+    public static int plat1Height = 1000;
+    public static int plat2Height = 580;
+    public static int plat3Height = 400;
+    public static int plat4Height = 219;
+    
     /**
      * Constructor for objects of class BackGround1.
      * 
      */
     public BackGround1()
-    {    
-        super(1500, 1000, 1); 
-        addObject(new DK(), 200, 150);
-        addObject(new Floor(), 125, 219);
-        addObject(new Floor(), 375, 219);
-        addObject(new Floor(), 625, 219);
-        addObject(new Floor(), 875, 219);
-        addObject(new Floor2(), 625, 500);
-        addObject(new Floor2(), 875, 500);
-        addObject(new Floor2(), 1125, 500);
-        addObject(new Floor2(), 1375, 500);
-        addObject(new Floor(), 125, 781);
-        addObject(new Floor(), 375, 781);
-        addObject(new Floor(), 625, 781);
-        addObject(new Floor(), 875, 781);
-        addObject(new Floor2(), 125, 1000);
-        addObject(new Floor2(), 375, 1000);
-        addObject(new Floor2(), 625, 1000);
-        addObject(new Floor2(), 875, 1000);
-        addObject(new Floor2(), 1125, 1000);
-        addObject(new Floor2(), 1375, 1000);
-        addObject(new Mario(), 125, 940);
+    {   
+        super(screenX, screenY, 1); // super(1500, 1000, 1)
+        addObject(new DK(), 100, 150);
+        addObject(new Floor(), 110, plat4Height); // 125, 219.
+        addObject(new Floor(), 310, plat4Height);
+        addObject(new Floor(), 500, plat4Height);
+        addObject(new Floor(), 700, plat4Height);
+        addObject(new Floor2(), 400, plat3Height);
+        addObject(new Floor2(), 600, plat3Height);
+        addObject(new Floor2(), 800, plat3Height);
+        addObject(new Floor2(), 1000, plat3Height);
+        addObject(new Floor(), 110, plat2Height);
+        addObject(new Floor(), 310, plat2Height);
+        addObject(new Floor(), 500, plat2Height);
+        addObject(new Floor(), 700, plat2Height);
+        addObject(new Floor2(), 110, plat1Height);
+        addObject(new Floor2(), 310, plat1Height);
+        addObject(new Floor2(), 500, plat1Height);
+        addObject(new Floor2(), 700, plat1Height);
+        addObject(new Floor2(), 900, plat1Height);
+        addObject(new Floor2(), 1100, plat1Height);
+        addObject(new Mario(), 125, 700);
     }
 }
