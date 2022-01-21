@@ -27,5 +27,10 @@ public class Barrel extends Actor
           }
        }
     }
+    public Barrel(){
+        GreenfootImage barrelImg = getImage();
+        barrelImg.scale(30,30);
+        setImage(barrelImg);
+    }
 }
  
