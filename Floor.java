@@ -15,5 +15,10 @@ public class Floor extends Actor
     public void act() 
     {
         // Add your action code here.
-    }    
+    }   
+    public Floor(){
+        GreenfootImage floorImg = getImage();
+        floorImg.scale(200,20);
+        setImage(floorImg);
+    }
 }
