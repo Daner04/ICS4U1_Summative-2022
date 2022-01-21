@@ -20,4 +20,9 @@ public class DK extends Actor
         }
       
     } 
+    public DK(){
+        GreenfootImage dkImg = getImage();
+        dkImg.scale(110,110);
+        setImage(dkImg);
+    }
 }
