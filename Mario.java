@@ -4,13 +4,35 @@ public class Mario extends Actor
     int speed;
     String Marioimage = "mariopixelCopy.png";
     long lastTime;
+   GreenfootImage CrossOut = new GreenfootImage("X.png");
+    GreenfootImage mushroomLiveCounter = new GreenfootImage("murshrum.jpg");
     int Lives = 3;
     public void act() 
     {
         speed = speed + 1;
         setLocation( getX(), getY() + speed);
-       getWorld().showText("Lives : "+ Lives +"",550, 40);
-        
+        GreenfootImage Mushroom = new GreenfootImage(mushroomLiveCounter);
+        Mushroom.scale(50, 50);
+        GreenfootImage Cross = new GreenfootImage(CrossOut);
+        Cross.scale(50, 50);
+      
+            if(Lives == 1 && Lives != 2 && Lives != 3){
+               getWorld().getBackground().drawImage(Mushroom, 990, 30);
+                getWorld().getBackground().drawImage(Cross, 930, 30);
+               getWorld().getBackground().drawImage(Cross, 870, 30);
+        }
+           if(Lives != 1 && Lives == 2 && Lives != 3){
+               getWorld().getBackground().drawImage(Mushroom, 990, 30);
+         getWorld().getBackground().drawImage(Mushroom, 930, 30);
+           getWorld().getBackground().drawImage(Cross, 870, 30);
+         
+            }
+            if(Lives != 1 && Lives != 2 && Lives == 3 ){
+          getWorld().getBackground().drawImage(Mushroom, 990, 30);
+         getWorld().getBackground().drawImage(Mushroom, 930, 30);
+         getWorld().getBackground().drawImage(Mushroom, 870, 30);
+            }
+       
         if(isTouching(Barrel.class))
         {
             removeTouching(Barrel.class);
@@ -19,7 +41,10 @@ public class Mario extends Actor
         }
         if(Lives == 0)
         {
-            getWorld().showText("GAME OVER", 550, 70);
+           getWorld().getBackground().drawImage(Cross, 990, 30);
+           getWorld().getBackground().drawImage(Cross, 930, 30);
+           getWorld().getBackground().drawImage(Cross, 870, 30);
+            getWorld().showText("GAME OVER", 550,70);
             Greenfoot.stop();
         }
         if(speed > 0)
@@ -47,15 +72,16 @@ public class Mario extends Actor
             move(-5);
             if(System.currentTimeMillis() - lastTime > 500 
             && Marioimage.equals("mariopixelCopy.png"))
-            {
+            { 
                 Marioimage = "marioleft.png";
                 setImage("marioleft.png");
+               
                 lastTime = System.currentTimeMillis();
             } else {
                 if(System.currentTimeMillis() - lastTime > 500)
                 {
                     Marioimage = "mariopixelCopy.png";
-                    setImage("mariopixelCopy.png");
+                     setImage("mariopixelCopy.png");
                     lastTime = System.currentTimeMillis();
                 }
             } 
@@ -70,6 +96,7 @@ public class Mario extends Actor
             if(Greenfoot.isKeyDown("right"))
             {
                move(5);
+            
                setImage("mariopixel.png");
                 while(isTouching(Floor.class))
                 {
@@ -84,4 +111,5 @@ public class Mario extends Actor
             speed = 50;
         }
     } 
+     
 }
