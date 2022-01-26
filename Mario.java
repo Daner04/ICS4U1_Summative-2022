@@ -4,16 +4,14 @@ public class Mario extends Actor
     int speed;
     String Marioimage = "mariopixelCopy.png";
     long lastTime;
-   GreenfootImage CrossOut = new GreenfootImage("X.png");
-    GreenfootImage mushroomLiveCounter = new GreenfootImage("murshrum.jpg");
     int Lives = 3;
     public void act() 
     {
         speed = speed + 1;
         setLocation( getX(), getY() + speed);
-        GreenfootImage Mushroom = new GreenfootImage(mushroomLiveCounter);
+        GreenfootImage Mushroom = new GreenfootImage("murshrum.jpg");
         Mushroom.scale(50, 50);
-        GreenfootImage Cross = new GreenfootImage(CrossOut);
+        GreenfootImage Cross = new GreenfootImage("X.png");
         Cross.scale(50, 50);
       
             if(Lives == 1 && Lives != 2 && Lives != 3){
@@ -37,7 +35,6 @@ public class Mario extends Actor
         {
             removeTouching(Barrel.class);
             Lives = Lives - 1;
-            
         }
         if(Lives == 0)
         {
