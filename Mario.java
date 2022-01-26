@@ -15,20 +15,20 @@ public class Mario extends Actor
         Cross.scale(50, 50);
       
             if(Lives == 1 && Lives != 2 && Lives != 3){
-               getWorld().getBackground().drawImage(Mushroom, 990, 30);
-                getWorld().getBackground().drawImage(Cross, 930, 30);
-               getWorld().getBackground().drawImage(Cross, 870, 30);
+               getWorld().getBackground().drawImage(Mushroom, 840, 30);
+                getWorld().getBackground().drawImage(Cross, 760, 30);
+               getWorld().getBackground().drawImage(Cross, 680, 30);
         }
            if(Lives != 1 && Lives == 2 && Lives != 3){
-               getWorld().getBackground().drawImage(Mushroom, 990, 30);
-         getWorld().getBackground().drawImage(Mushroom, 930, 30);
-           getWorld().getBackground().drawImage(Cross, 870, 30);
+               getWorld().getBackground().drawImage(Mushroom, 840, 30);
+         getWorld().getBackground().drawImage(Mushroom, 760, 30);
+           getWorld().getBackground().drawImage(Cross, 680, 30);
          
             }
             if(Lives != 1 && Lives != 2 && Lives == 3 ){
-          getWorld().getBackground().drawImage(Mushroom, 990, 30);
-         getWorld().getBackground().drawImage(Mushroom, 930, 30);
-         getWorld().getBackground().drawImage(Mushroom, 870, 30);
+          getWorld().getBackground().drawImage(Mushroom, 680, 30);
+         getWorld().getBackground().drawImage(Mushroom, 760, 30);
+         getWorld().getBackground().drawImage(Mushroom, 840, 30);
             }
        
         if(isTouching(Barrel.class))
@@ -38,9 +38,9 @@ public class Mario extends Actor
         }
         if(Lives == 0)
         {
-           getWorld().getBackground().drawImage(Cross, 990, 30);
-           getWorld().getBackground().drawImage(Cross, 930, 30);
-           getWorld().getBackground().drawImage(Cross, 870, 30);
+           getWorld().getBackground().drawImage(Cross, 840, 30);
+           getWorld().getBackground().drawImage(Cross, 760, 30);
+           getWorld().getBackground().drawImage(Cross, 680, 30);
             getWorld().showText("GAME OVER", 550,70);
             Greenfoot.stop();
         }
