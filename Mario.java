@@ -41,7 +41,7 @@ public class Mario extends Actor
            getWorld().getBackground().drawImage(Cross, 840, 30);
            getWorld().getBackground().drawImage(Cross, 760, 30);
            getWorld().getBackground().drawImage(Cross, 680, 30);
-            getWorld().showText("GAME OVER", 550,70);
+            getWorld().showText("GAME OVER", 450,70);
             Greenfoot.stop();
         }
         if(speed > 0)
