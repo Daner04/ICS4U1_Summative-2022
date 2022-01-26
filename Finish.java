@@ -18,10 +18,10 @@ public class Finish extends World
              getBackground().drawImage(WinnerText, 100, 0);
             WinnerText.scale(30,30);
         addObject(new Floor2(),0 , 400);
-        addObject(new Floor2(),200 , 400);
-        addObject(new Floor2(),400 , 400);
-        addObject(new Floor2(),600 , 400);
-        addObject(new Princess(), 180, 350);
-        addObject(new Mario(), 450, 350);
+        addObject(new Floor2(),190 , 400);
+        addObject(new Floor2(),380 , 400);
+        addObject(new Floor2(),570 , 400);
+        addObject(new Princess(), 180, 370);
+        addObject(new Mario(), 450, 360);
     }
 }
