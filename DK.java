@@ -26,7 +26,7 @@ public class DK extends Actor
     } 
     public DK(){
         GreenfootImage dkImg = getImage();
-        dkImg.scale(110,110);
+        dkImg.scale(65,65);
         setImage(dkImg);
         
     }
