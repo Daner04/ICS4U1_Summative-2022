@@ -44,6 +44,6 @@ public class BackGround1 extends World
         addObject(new Floor2(), 800, plat1Height);
         addObject(new Floor(), 150, 110);
         addObject(new Mario(), 125, 550);
-        addObject(new Princess(), 110, 80);
+        addObject(new Princess(), 50, 240);
     }
 }
