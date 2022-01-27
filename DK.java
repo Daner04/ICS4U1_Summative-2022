@@ -6,7 +6,7 @@ public class DK extends Actor
      GreenfootImage DkStanding = new GreenfootImage("donkey-kong_standing.png");
    public void act() 
     {
-        if(!isTouching(Mario.class))
+        if(isTouching(Mario.class))
         {
             Greenfoot.setWorld(new Finish());
 
